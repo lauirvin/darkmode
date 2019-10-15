@@ -1,0 +1,84 @@
+html,
+body {
+  height: 100%;
+  width: 100%;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  text-align: center;
+}
+
+button {
+  outline: none;
+  border: none;
+}
+
+h1 {
+  margin: 2.5rem 0 2.5rem 0;
+  line-height: 1.5;
+}
+
+h2 {
+  margin: 2rem 0 2rem 0;
+  color: #707070;
+}
+
+span {
+  color: #465362;
+}
+
+p {
+  margin: 0;
+}
+
+.socials {
+  display: flex;
+  justify-content: space-evenly;
+  width: 65%;
+  margin: 0 auto;
+}
+
+.socials img {
+  width: 1.9rem;
+  filter: invert(44%) sepia(0%) saturate(72%) hue-rotate(143deg) brightness(99%)
+    contrast(95%);
+}
+
+.links {
+  margin-top: 3.5rem;
+  height: 2.7rem;
+}
+
+.links button {
+  height: 100%;
+  background: white;
+  background: none;
+  box-shadow: 2px 2px 10px 0 rgba(0, 0, 0, 0.08);
+  border-radius: 10px;
+  padding: 0 1.8rem 0 1.8rem;
+  filter: invert(32%) sepia(13%) saturate(758%) hue-rotate(172deg)
+    brightness(89%) contrast(88%);
+}
+
+.links .view-source {
+  margin-right: 1.5rem;
+  background-image: url("../media/github.svg");
+  background-repeat: no-repeat;
+  background-position: 2rem;
+  background-size: 1.1rem;
+}
+
+.links .about-author {
+  background-image: url("../media/link.png");
+  background-repeat: no-repeat;
+  background-position: 2rem;
+  background-size: 1.1rem;
+}
+
+.links p {
+  margin-left: 1.9rem;
+}
