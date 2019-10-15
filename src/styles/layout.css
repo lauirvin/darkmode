@@ -29,6 +29,7 @@ h2 {
 
 span {
   color: #465362;
+  overflow-wrap: break-word;
 }
 
 p {
@@ -44,41 +45,61 @@ p {
 
 .socials img {
   width: 1.9rem;
-  filter: invert(44%) sepia(0%) saturate(72%) hue-rotate(143deg) brightness(99%)
-    contrast(95%);
+  transition: 0.2s all;
+}
+
+.socials img:hover {
+  transform: scale(1.05);
 }
 
 .links {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 88%;
+  margin: 0 auto;
   margin-top: 3.5rem;
   height: 2.7rem;
 }
 
-.links button {
+.links a {
+  display: flex;
+  align-items: center;
   height: 100%;
-  background: white;
+  background-color: white;
   background: none;
   box-shadow: 2px 2px 10px 0 rgba(0, 0, 0, 0.08);
   border-radius: 10px;
   padding: 0 1.8rem 0 1.8rem;
-  filter: invert(32%) sepia(13%) saturate(758%) hue-rotate(172deg)
-    brightness(89%) contrast(88%);
-}
-
-.links .view-source {
-  margin-right: 1.5rem;
-  background-image: url("../media/github.svg");
   background-repeat: no-repeat;
   background-position: 2rem;
   background-size: 1.1rem;
+  text-decoration: none;
+  color: #465362;
+  transition: 0.2s all;
 }
 
-.links .about-author {
-  background-image: url("../media/link.png");
-  background-repeat: no-repeat;
-  background-position: 2rem;
-  background-size: 1.1rem;
+.links a:hover {
+  box-shadow: 2px 2px 10px 0 rgba(0, 0, 0, 0.15);
+  transform: scale(1.05);
+  cursor: pointer;
 }
 
 .links p {
   margin-left: 1.9rem;
+}
+
+.links .view-source {
+  background-image: url("../media/links/github.svg");
+}
+
+.links .about-author {
+  background-image: url("../media/links/link.svg");
+}
+
+/* Tablet Devices (Portrait) */
+@media (max-width: 768px) {
+  html {
+    font-size: 70%;
+  }
 }
