@@ -6,10 +6,12 @@ body {
 
 body {
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   align-content: center;
   text-align: center;
+  background-color: #ffffff;
 }
 
 button {
@@ -28,15 +30,38 @@ h2 {
 }
 
 span {
-  color: #465362;
   overflow-wrap: break-word;
+  color: #465362;
 }
 
 p {
   margin: 0;
 }
 
+.switch {
+  background-size: 10rem;
+  background-color: transparent;
+  margin-bottom: 4rem;
+  width: 10rem;
+  height: 10rem;
+  transition: 0.7s all;
+  background-image: url("../media/switch/sun.png");
+}
+
+.switch:hover {
+  transform: scale(1.2);
+  cursor: pointer;
+}
+
+.mode:before {
+  text-decoration: underline;
+  color: #fcd462;
+  content: "“Light Mode”";
+}
+
 .socials {
+  filter: invert(45%) sepia(0%) saturate(1037%) hue-rotate(172deg)
+    brightness(96%) contrast(85%);
   display: flex;
   justify-content: space-evenly;
   width: 65%;
@@ -64,25 +89,25 @@ p {
 
 .links a {
   display: flex;
+  color: inherit;
   align-items: center;
   height: 100%;
-  background-color: white;
-  background: none;
-  box-shadow: 2px 2px 10px 0 rgba(0, 0, 0, 0.08);
   border-radius: 10px;
   padding: 0 1.8rem 0 1.8rem;
   background-repeat: no-repeat;
   background-position: 2rem;
   background-size: 1.1rem;
   text-decoration: none;
-  color: #465362;
   transition: 0.2s all;
+  box-shadow: 2px 2px 10px 0 rgba(0, 0, 0, 0.13);
+  filter: invert(32%) sepia(18%) saturate(585%) hue-rotate(172deg)
+    brightness(86%) contrast(87%);
 }
 
 .links a:hover {
-  box-shadow: 2px 2px 10px 0 rgba(0, 0, 0, 0.15);
   transform: scale(1.05);
   cursor: pointer;
+  box-shadow: 2px 2px 10px 0 rgba(0, 0, 0, 0.2);
 }
 
 .links p {

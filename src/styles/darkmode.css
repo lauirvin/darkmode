@@ -1,0 +1,32 @@
+/* Dark Mode */
+
+.mod-dark {
+  background-color: #5a5a5a;
+}
+
+.mod-dark .mode:before {
+  color: #ffffff;
+  content: "“Dark Mode”";
+}
+
+.mod-dark .switch {
+  background-image: url("../media/switch/moon.png");
+}
+
+.mod-dark h2 {
+  color: #ffffff;
+}
+
+.mod-dark span {
+  color: #bed5ff;
+}
+
+.mod-dark .socials {
+  filter: invert(99%) sepia(100%) saturate(0%) hue-rotate(312deg)
+    brightness(102%) contrast(100%);
+}
+
+.mod-dark .links a {
+  filter: invert(99%) sepia(100%) saturate(0%) hue-rotate(312deg)
+    brightness(102%) contrast(100%);
+}
