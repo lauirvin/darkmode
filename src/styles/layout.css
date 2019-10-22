@@ -38,6 +38,15 @@ p {
   margin: 0;
 }
 
+@keyframes hover {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(-10px);
+  }
+}
+
 .switch {
   background-size: 10rem;
   background-color: transparent;
@@ -46,6 +55,7 @@ p {
   height: 10rem;
   transition: 0.7s all;
   background-image: url("../media/switch/sun.png");
+  animation: hover 2s infinite alternate;
 }
 
 .switch:hover {

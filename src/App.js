@@ -19,12 +19,7 @@ const App = () => {
     const body = document.body.classList;
 
     localMode === "mod-dark" ? body.remove("mod-dark") : body.add("mod-dark");
-
-    if (localMode === "mod-dark") {
-      localStorage.setItem("mode", "");
-    } else {
-      localStorage.setItem("mode", "mod-dark");
-    }
+    localMode === "mod-dark" ? localStorage.setItem("mode", "") : localStorage.setItem("mode", "mod-dark");
   };
 
   return (
