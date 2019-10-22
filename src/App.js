@@ -7,19 +7,24 @@ import LinkedIn from "./media/socials/linkedin.svg";
 import YouTube from "./media/socials/youtube.svg";
 
 const App = () => {
+  const changeMode = (title, mode, body) => {
+    document.title = title;
+    localStorage.setItem("mode", mode);
+    title === "Dark" ? body.add("mod-dark") : body.remove("mod-dark");
+  };
+  
   useEffect(() => {
     const localMode = localStorage.getItem("mode");
     const body = document.body.classList;
 
-    localMode === "mod-dark" ? body.add("mod-dark") : body.remove("mod-dark");
+    localMode === "mod-dark" ? changeMode("Dark", "mod-dark", body) : changeMode("Light", "", body);
   }, []);
 
   const handleSwitch = () => {
     const localMode = localStorage.getItem("mode");
     const body = document.body.classList;
 
-    localMode === "mod-dark" ? body.remove("mod-dark") : body.add("mod-dark");
-    localMode === "mod-dark" ? localStorage.setItem("mode", "") : localStorage.setItem("mode", "mod-dark");
+    localMode === "mod-dark" ? changeMode("Light", "", body) : changeMode("Dark", "mod-dark", body);
   };
 
   return (
